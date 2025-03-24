@@ -190,5 +190,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "test-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
