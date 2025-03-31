@@ -1,0 +1,151 @@
+@layer blocks {
+    .news-feed .main-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .news-feed .main-row .most-recent-heading {
+        font-family: var(--narrow-heading-font-family);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: var(--coredark-101);
+        width: fit-content;
+        white-space: nowrap;
+    }
+
+    .news-feed .main-row .newsfeed-list {
+        margin-left: 50px;
+    }
+
+    .news-feed .main-row .newsfeed-list .item-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        position: relative;
+        margin: 10px 0;
+        padding: 0;
+        overflow: auto;
+        list-style: none;
+    }
+
+    .news-feed .main-row .newsfeed-list .item-list .item {
+        width: 30%;
+    }
+
+    .news-feed .main-row .newsfeed-list .item-list .item .item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .news-feed .main-row .newsfeed-list .item-list .item .item-wrapper .content-wrapper .date {
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 22px;
+        color: #828B93;
+        margin-bottom: 12px;
+    }
+
+    .news-feed .main-row .newsfeed-list .item-list .item .item-wrapper .content-wrapper .item-title {
+        display: block;
+        color: var(--coredark-101);
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 20px;
+    }
+
+    .news-feed .main-row .newsfeed-list .item-list .item .item-wrapper .read-more-link {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        color: var(--corered-101);
+        text-decoration: none;
+        margin-top: 5px;
+    }
+
+    .news-feed .main-row .newsfeed-list .item-list .item .item-wrapper .read-more-link::after {
+        display: inline-block;
+        content: '';
+        background-image: url("/content/dam/picr/ico/arrow-right-red_75x75.png");
+        line-height: 18px;
+        height: 18px;
+        width: 18px;
+        background-size: cover;
+        vertical-align: middle;
+        margin-left: 14px;
+    }
+
+    .news-feed .pagination-nav {
+        text-align: center;
+        color: var(--coreneutral-108);
+        font-weight: 400;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    .news-feed .pagination-nav button {
+        margin: 0 4px;
+        padding: 6px 10px;
+        background: unset;
+        color: inherit;
+        font-size: 1em;
+    }
+
+    .news-feed .pagination-nav button.active-page {
+        background-color: var(--coreneutral-107);
+        color: var(--coreneutral-101);
+    }
+
+    .news-feed .pagination-nav .prev-page-button, .news-feed .pagination-nav .next-page-button {
+        content: '';
+        background-image: url('https://press.pingidentity.com/images/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 4px;
+        padding: 6px 10px;
+        color: transparent;
+    }
+
+    .news-feed .pagination-nav .next-page-button {
+        transform: rotate(180deg);
+    }
+
+    .news-feed .pagination-nav .prev-page-button, .news-feed .pagination-nav .page-link {
+        font-weight: 400;
+    }
+
+    .news-feed .error-msg {
+        margin: 60px 20px;
+        text-align: center;
+        color: var(--coreneutral-110);
+    }
+
+    @media (width <= 992px) {
+        .news-feed .main-row {
+            flex-direction: column;
+        }
+
+        .news-feed .main-row .most-recent-heading {
+            margin-bottom: 10px;
+        }
+
+        .news-feed .main-row .newsfeed-list {
+            margin-left: 0;
+        }
+
+        .news-feed .main-row .newsfeed-list .item-list .item {
+            width: 40%;
+        }
+    }
+
+    @media (width <= 767px) {
+        .news-feed .main-row .newsfeed-list .item-list .item {
+            width: 100%;
+        }
+    }
+}
